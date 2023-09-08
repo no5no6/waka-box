@@ -14,7 +14,6 @@ const octokit = new Octokit({ auth: `token ${githubToken}` });
 
 async function main() {
   const stats = await wakatime.getMyStats({ range: RANGE.LAST_7_DAYS });
-  console.log('---------stats.data:', stats.data)
   await updateGist(stats);
 }
 
